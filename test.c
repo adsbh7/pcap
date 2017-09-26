@@ -30,7 +30,7 @@
 		uint16_t ethertype;
 		uint8_t ip_protocol;
 
-				if(res == 0) continue;
+		if(res == 0) continue;
                 else if(res > 0)
                 {
                      //   struct ether_header * ethhdr; 
@@ -62,7 +62,7 @@
                                 printf(":");
                         }
 			
-			printf("\nethertype : %x\n",ethhdr->ether_type);	
+			//printf("\nethertype : %x\n",ethhdr->ether_type);	
 
 			ethertype = ntohs(ethhdr->ether_type);
 			
@@ -81,7 +81,7 @@
 
 			ip_protocol = iphdr->ip_p;
 
-			printf("pro : %x\n",ip_protocol);
+			//printf("pro : %x\n",ip_protocol);
 
 			if(ip_protocol == 0x6) // tcp인 경우
 			{
